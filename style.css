@@ -1,0 +1,29 @@
+
+.blockmenu{
+    background-color: gray;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.blocoprincipalpapeis{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.blockmenutexto{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-direction: row;
+}
+
+.divblockpapeis{
+    border: 2px solid black;
+    width: 25%;
+    justify-content: center;
+}
+
+.divpapeis{
+    text-align: center;
+    
+}
