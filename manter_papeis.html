@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <title>SLFood</title>
 </head>
 <body>
@@ -50,27 +49,21 @@
             
         </table>
         <div class="botoesfuncao">
-            <a href=""><button>Remover</button></a>
-            <a href=""><button>Alterar</button></a>
-            <a href=""><button onclick="trocartela()">Novo</button></a>
-            <a href="index.html"><button>Voltar</button></a>
+            <button class="btn1">Remover</button>
+            <button class="btn2">Alterar</button>
+            <button class="btn3">Novo</button>
+            <button class="btn4" onclick="window.location.href='index.html';">Voltar</button>
         </div>
         
 
     </div>
 
-    <script>
-        $('#novopapel').on('click',function(){
-            $('#blocknovopapel').local('subpag_manterpapeis.html')
+    
 
-        });
-    </script>
-
-
-    <div class="block-novopapel" style="display: none;">
+    <div class="block-novopapel" style="display: none;" >
         <form>
             <label>Papel</label>
-            <select class="blockopcoes" name="plataforma" required="required">
+            <select class="blockopcoes" name="papeis" required="required">
                  
                 <option value="entregador">Entregador</option>
                 <option value="auxiliarcozinha">Auxiliar De Cozinha</option>
@@ -81,5 +74,6 @@
             <input type="submit" value="Selecionar">
         </form>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
