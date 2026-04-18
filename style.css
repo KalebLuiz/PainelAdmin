@@ -68,7 +68,7 @@ a{
     width: 20%;
     text-align: center;
     margin-top: 20px;
-    margin: 0;
+
     
 }
 
@@ -78,5 +78,29 @@ a{
 }
 .botoesfuncao button {
      padding: 5px;
-     margin: 0;
+     
+}
+.formulario{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.forms{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    
+}
+.blocknovopapel{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 10px;
+}
+.blockopcoes{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }

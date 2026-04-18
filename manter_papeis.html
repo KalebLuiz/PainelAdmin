@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>SLFood</title>
 </head>
 <body>
-    <div class="divblockmenu">
+    <header>
+        <div class="divblockmenu">
         <div class="blockmenu">
             <div class="blockmenutexto">
                 <p>SLFood - Sistema de Gestão</p>
@@ -15,8 +17,9 @@
             </div>
         </div>
     </div>
+    </header>
 
-    <div class="blocktabelapapeis">
+    <div class="blocktabela-papeis">
         
         <table border="1">
             <tr>
@@ -49,11 +52,34 @@
         <div class="botoesfuncao">
             <a href=""><button>Remover</button></a>
             <a href=""><button>Alterar</button></a>
-            <a href=""><button>Novo</button></a>
-            <a href=""><button>Voltar</button></a>
+            <a href=""><button onclick="trocartela()">Novo</button></a>
+            <a href="index.html"><button>Voltar</button></a>
         </div>
         
 
+    </div>
+
+    <script>
+        $('#novopapel').on('click',function(){
+            $('#blocknovopapel').local('subpag_manterpapeis.html')
+
+        });
+    </script>
+
+
+    <div class="block-novopapel" style="display: none;">
+        <form>
+            <label>Papel</label>
+            <select class="blockopcoes" name="plataforma" required="required">
+                 
+                <option value="entregador">Entregador</option>
+                <option value="auxiliarcozinha">Auxiliar De Cozinha</option>
+                <option value="atendente">Atendente</option>
+                <option value="cozinheiro">Cozinheiro</option>
+                <option value="admin">Admin</option>
+            </select>
+            <input type="submit" value="Selecionar">
+        </form>
     </div>
 </body>
 </html>
