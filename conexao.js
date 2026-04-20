@@ -4,17 +4,37 @@ const API_URL = "https://x8ki-letl-twmt.n7.xano.io/api:bQLUlOV-/papel";
 // criar uma função assicrona de chamada da api
 async function CriarPapel() {
     try{
-    //fazer chamda no xano
-    const resposta = await fetch(API_URL);
-    //fetch -> tag responsavel para fazer a chamada
-
-    if (!resposta.ok){
+        const resposta = await fetch(API_URL);
+        if (!resposta.ok){
         //se a resposta for diferte de 200 entao ele da erro
         throw new Error ("Erro conexão")
-    }
+        }
+        
+    //transformar em json
+        const ListaPapeis = await resposta.json();
+        console.log("Dados recebidos", ListaPapeis);
 
-    const dados = await resposta.json();
-    console.log("Dados Recebidos", dados);
+
+    //fetch -> tag responsavel para fazer a chamada
+        const retornoPapeis = document.getElementById("retorno_papeis");
+        let linhas = '';
+        ListaPapeis.forEach(item => {
+        linhas += `
+            <tr>
+                <td>${item.papel}</td>
+                <td><input type="radio" name="selecao"></td>
+            </tr>
+        
+        
+        `;
+
+    });  
+
+    
+
+
+
+    retornoPapeis.innerHTML += linhas;
 
     } catch (erro){
         console.error("algo de errado nao esta certo ",erro);
@@ -46,10 +66,16 @@ FormNovoPapel.addEventListener('submit', async (event) => {
             body: JSON.stringify(DadosEnvio)
             
         });
-
+        //fazer apos cadastro de papel a tela voltar pra table
         if (resposta_papel.ok){
             alert("Sucesso");
             FormNovoPapel.reset() //Resetar o forM
+            const SairTelaCadastro = document.querySelector(".block-novopapel");
+            SairTelaCadastro.style.display = "none";
+
+            const VoltarTelaTabela = document.querySelector(".blocktabela-papeis")
+            VoltarTelaTabela.style.display = "block";
+            location.reload()
         } else {
             alert('Erro');
         }
@@ -61,5 +87,9 @@ FormNovoPapel.addEventListener('submit', async (event) => {
     }
 
 });
+
+
+
+
 
 
