@@ -61,19 +61,14 @@
     
 
     <div class="block-novopapel" style="display: none;" >
-        <form>
-            <label>Papel</label>
-            <select class="blockopcoes" name="papeis" required="required">
-                 
-                <option value="entregador">Entregador</option>
-                <option value="auxiliarcozinha">Auxiliar De Cozinha</option>
-                <option value="atendente">Atendente</option>
-                <option value="cozinheiro">Cozinheiro</option>
-                <option value="admin">Admin</option>
-            </select>
-            <input type="submit" value="Selecionar">
+        <p>Papel</p>
+        <form id="formularioNovoPapel">
+            <label> Novo Papel</label>
+            <input type="text" id="campoPapel" required>
+            <input type="submit" id="NovoPapelCriado" value="Cadastrar Novo Papel">
         </form>
     </div>
     <script src="script.js"></script>
+    <script src="conexao.js"></script>
 </body>
 </html>
