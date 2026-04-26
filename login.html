@@ -7,28 +7,22 @@
     <title>SLFood</title>
 </head>
 <body>
-    <header>
-        <div class="divblockmenu">
-        <div class="blockmenu">
-            <div class="blockmenutexto">
-                <p>SLFood - Sistema de Gestão</p>
-                <p>Kaleb(admin)</p>
-            </div>
-        </div>
-    </div>
-    </header>
+    
 
     <div class="blockautenticator">
         <div class="formulario">
-            <form class="forms">
-                <label>E-mail: </label>
-                <input type="email" id="email" name="email" placeholder="Digite seu Email">
-                <label>Senha: </label>
-                <input type="password" name="senha" id="senha" placeholder="Digite sua Senha">
+            <form id="forms" class="forms">
+                <label for="emailUser">E-mail: </label>
+                <input type="email" id="emailUser" name="email" placeholder="Digite seu Email">
+                <label for="senhaUser">Senha: </label>
+                <input type="password" name="senha" id="senhaUser" placeholder="Digite sua Senha">
                 <input type="submit" value="Enviar">
             </form>
         </div>
     </div>
+    <script src="authentic.js"></script>
+    <script src="token.js"></script>
+    <script src="autenticado.js"></script>
     
 </body>
 </html>

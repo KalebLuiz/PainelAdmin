@@ -1,106 +1,322 @@
-
-.blockmenu{
-    background-color: gray;
-    color: white;
+* {
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
 }
-.blocoprincipalpapeis{
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* -----Header */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 40px;
+}
+
+.divblockmenu {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.blockmenu {
+    padding: 16px 0;
+}
+
+.blockmenutexto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blockmenutexto p:first-child {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.blockmenutexto p:last-child {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+/* -----Login */
+.blockautenticator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+    padding: 20px;
+}
+
+.formulario {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 32px;
+    width: 100%;
+    max-width: 380px;
+}
+
+.forms {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-top: 5%;
-    
 }
-.blockmenutexto{
+
+.forms label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.forms input[type="email"],
+.forms input[type="password"] {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.forms input[type="email"]:focus,
+.forms input[type="password"]:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.forms input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.forms input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* -----Pág Principal */
+.blocoprincipalpapeis {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    flex-direction: row;
-    
-    
-}
-
-.blocoprincipalpapeis{
-    display: flex;
-    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+    padding: 20px;
 }
 
-.divblockpapeis{
-  display: flex;
-  text-align: center;
-  border: 0.5px solid black;
-  width: 10%;
-  justify-content: center;
-  
-  
-}
-
-.divpapeistextos button{
+.divblockpapeis {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 32px;
     width: 100%;
-    background-color: white;
+    max-width: 400px;
 }
 
+.divpapeistextos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 
+.divpapeistextos button {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
 
-.divpapeistextos a{
+.divpapeistextos button:hover {
+    background-color: #f9f9f9;
+}
+
+.divpapeistextos button a {
     text-decoration: none;
-    color: black;
-}
-a{
-    color: beige;
+    color: #333;
+    display: block;
 }
 
-
-.sair{
-    text-decoration: none ;
-    color: aquamarine;
+.divpapeistextos button p {
+    font-size: 16px;
+    margin: 0;
 }
 
+.divpapeistextos button.sair {
+    margin-top: 20px;
+    border-color: #e74c3c;
+}
 
+.divpapeistextos button.sair a {
+    color: #e74c3c;
+}
 
-.blocktabelapapeis{
+.divpapeistextos button.sair:hover {
+    background-color: #fef5f5;
+}
+
+/* -----Manter papéis*/
+.blocktabela-papeis {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#retorno_papeis {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+}
+
+#retorno_papeis {
+    text-align: left;
+    padding: 12px;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e0e0e0;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#retorno_papeis td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.botoesfuncao {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 20%;
-    text-align: center;
-    margin-top: 20px;
-
-    
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-.botoesfuncao{
-    text-align: center;
-    margin-top: 20px;
-}
 .botoesfuncao button {
-     padding: 5px;
-     
-}
-.formulario{
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 14px;
+    cursor: pointer;
 }
 
-.forms{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
+.botoesfuncao button:hover {
+    background-color: #f5f5f5;
+}
+
+.btn1 {
+    color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+.btn1:hover {
+    background-color: #fef5f5;
+}
+
+.btn2 {
+    color: #f39c12;
+    border-color: #f39c12;
+}
+
+.btn2:hover {
+    background-color: #fef9e6;
+}
+
+.btn3 {
+    color: #27ae60;
+    border-color: #27ae60;
+}
+
+.btn3:hover {
+    background-color: #eafaf1;
+}
+
+/* -----Novo Papel*/
+.block-novopapel {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 24px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     
 }
-.blocknovopapel{
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    margin-top: 10px;
+
+.block-novopapel p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2c3e50;
 }
-.blockopcoes{
-    margin: 10px;
+
+#formularioNovoPapel {
     display: flex;
     flex-direction: column;
-    text-align: center;
+}
+
+#formularioNovoPapel label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+#campoPapel {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#campoPapel:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+#NovoPapelCriado {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    
+}
+
+#NovoPapelCriado:hover {
+    background-color: #2980b9;
+}
+
+/* -----Responsividade */
+@media (max-width: 768px) {
+    .blockmenutexto {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    
+    .formulario,
+    .divblockpapeis,
+    .blocktabela-papeis {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    .botoesfuncao button {
+        flex: 1;
+    }
 }
