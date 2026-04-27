@@ -31,11 +31,8 @@ async function DadosUser() {
         }
 
     
-        if(token_auth == localStorage.getItem('token_de_acesso')){
-            window.location.replace('index.html');
-        }
+       
         
-        console.log(dados)
     
     
     
@@ -46,7 +43,9 @@ async function DadosUser() {
 
 }
 
-   
+
+
+
 
 
 
@@ -59,5 +58,7 @@ function Logout() {
     localStorage.removeItem ('token_de_acesso');
     window.location.replace('login.html');
 }
+
+
 
 
