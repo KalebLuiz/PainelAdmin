@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 //chamar uma função assicrona com a API
 async function realizarLogin(email, senha) {
     const url = 'https://x8ki-letl-twmt.n7.xano.io/api:yNjbB5PN/auth/login';
@@ -27,11 +21,13 @@ async function realizarLogin(email, senha) {
             const token = resultado.authToken;
             localStorage.setItem('token_de_acesso',token);
             
-            //window.location.replace('index.html');
+            
+            window.location.replace('index.html');
 
            
             function verifyauth (){
                 const token = localStorage.getItem('token_de_acesso');
+                
         
                 if(!token){
                 // Se meu token não existir
@@ -86,48 +82,6 @@ async function realizarLogin(email, senha) {
 
 
 
-//------------função para passar os dados
- async function DadosUser() {
-    const token_auth = localStorage.getItem('token_de_acesso');
-    const url = 'https://x8ki-letl-twmt.n7.xano.io/api:yNjbB5PN/auth/me';
-    
-
-    try {
-        resposta = await fetch(url,{
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token_auth}`
-          }
-         });
-
-        if (resposta.status === 401){
-            Logout();
-        
-        }
-        const dados = await resposta.json();
-        const nameUSer = dados.nome
-        
-
-        // passar o parametro do nome do admin para o html
-        const variavelnome = document.getElementById('adminuser');
-        localStorage
-        if (variavelnome){
-            document.getElementById('adminuser').innerText = nameUSer;
-        }
-
-        console.log(token_auth);
-       
-        
-    
-    
-    
-
-    } catch(erro){
-        console.error();
-    }
-
-}
 
 
 

@@ -1,26 +1,9 @@
-///////-------- Botoes Manter Papeis
-let btn1 = document.querySelector(".btn1");
-let btn2 = document.querySelector(".btn2");
-let btn3 = document.querySelector(".btn3");
-let btn4 = document.querySelector(".btn4");
-let BlockTabelaPapeis = document.querySelector(".blocktabela-papeis");
-let BlockNovoPapel = document.querySelector(".block-novopapel");
-
-btn3.addEventListener("click", function(){
-    BlockTabelaPapeis.style.display = 'none'
-    BlockNovoPapel.style.display = 'block';
-
-});
-
-
-
-
 ///////-------------Botoes manter colaboradores
 
 let ButtonRemove = document.querySelector(".ButtonRemove");
 let ButtonAlterar =  document.querySelector(".ButtonAlterar");
 let ButtonNew = document.querySelector(".ButtonNew");
-let ButtonVoltar = document.querySelector(".ButtonVoltar");
+
 
 let BlockTabelaNovoColaborador = document.querySelector(".NovoColaborador");
 let BlockTabelaAlterarColaborador = document.querySelector(".AlteracaoColaborador");
@@ -34,6 +17,15 @@ ButtonNew.addEventListener("click", function(){
     BlockTableFuncionarios.style.display = 'none';
     BlockTabelaNovoColaborador.style.display = 'block';
 });
+
+ButtonAlterar.addEventListener("click", function() {
+    BlockTableFuncionarios.style.display = 'none';
+    BlockTabelaNovoColaborador.style.display = 'none';
+    ActionButtons.style.display = 'none';
+    BlockTabelaAlterarColaborador.style.display = 'block';
+});
+
+
 
 
 

@@ -21,7 +21,7 @@ async function CriarPapel() {
         ListaPapeis.forEach(item => {
         linhas += `
             <tr>
-                <td>${item.papel}</td>
+                <td>${item.Papel}</td>
                 <td><input type="radio" name="selecao"></td>
             </tr>
         

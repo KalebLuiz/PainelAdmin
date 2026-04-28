@@ -3,6 +3,7 @@
 
 async function DadosUser() {
     const token_auth = localStorage.getItem('token_de_acesso');
+    console.log(token_auth);
     const url = 'https://x8ki-letl-twmt.n7.xano.io/api:yNjbB5PN/auth/me';
     
 
@@ -21,11 +22,11 @@ async function DadosUser() {
         }
         const dados = await resposta.json();
         const nameUSer = dados.nome
+        localStorage.setItem('NomeAdmin',nameUSer);
         
 
         // passar o parametro do nome do admin para o html
         const variavelnome = document.getElementById('adminuser');
-        localStorage
         if (variavelnome){
             document.getElementById('adminuser').innerText = nameUSer;
         }
@@ -42,6 +43,8 @@ async function DadosUser() {
     }
 
 }
+
+DadosUser();
 
 
 
