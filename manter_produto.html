@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/PainelAdmin/style.css">
+    <title>SLFood</title>
+</head>
+<body>
+    <header>
+        <div class="divblockmenu">
+        <div class="blockmenu">
+            <div class="blockmenutexto">
+                <p>SLFood - Sistema de Gestão</p>
+                <p><span id="adminuser"></span> (admin)</p>
+            </div>
+        </div>
+    </div>
+    </header>
+
+    <!-- Tabela que vai retornar todos os pratos disponiveis --> 
+    <table border="1px" id="retorno-produtos" class="retorno-produtos">
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Qtd_Disp</th>
+            <th>Url_imagem</th>
+            <th>Preço</th>
+            <th>Precisa Produzir</th>
+            <th>Categoria</th>
+            <th>Seleção</th>
+          
+        </tr>
+
+        
+
+
+
+    </table>
+
+    <div class="botoesfunc" >
+        <button class="remove">Remover</button>
+        <button class="alterar" onclick="coletarID()">Alterar</button>
+        <button class="novo">Novo</button>
+        <button onclick="window.location.href='index.html';">Voltar</button>
+    </div>
+   
+
+
+    <form class="novoprato" style="display: none;" id="novoprato">
+        <p>Dados do Novo Prato</p>
+        <div class="inputspratos" id="inputspratos">
+            <label for="nome_prato">Nome</label>
+            <input type="text" id="nome_prato" required >
+            <label for="descricao_prato">Descrição</label>
+            <input type="text" id="descricao_prato" required>
+            <label for="quantidade_disp_prato">Quantidade</label>
+            <input type="number" min="1" id="quantidade_disp_prato" required>
+            <label for="url_imagem">Url_imagem</label>
+            <input type="text" id="url_imagem" required>
+            <label for="preco_prato">Preço</label>
+            <input type="number" step="0.01" min="1" id="preco_prato" required>
+            <label for="precisa_produzir">Precisa Produzir</label>
+            <input type="checkbox" id="precisa_produzir" >
+            <label for="">Categoria</label>
+            <select name="categoria" id="categoria_prato">
+                <option value="Prato Principal" id="Prato_Principal">Prato Principal</option>
+                <option value="Bebida" id="Bebidas">Bebida</option>
+            </select>
+            <input type="submit" value="Criar Novo Prato" id="criarprato">
+            <button id="cancelar" onclick="window.location.href='manter_produto.html';">Cancelar</button>
+        </div>
+    </form>
+
+
+
+
+
+
+    <div class="editar_prato" style="display: none;">
+        <p>Editar Prato</p>
+        <div class="inputspratos">
+            <label for="nome_prato">Nome</label>
+            <input type="text" id="nome_prato" required >
+            <label for="descricao_prato">Descrição</label>
+            <input type="text" id="descricao_prato" required>
+            <label for="quantidade_disp_prato">Quantidade</label>
+            <input type="number" id="quantidade_disp_prato" required>
+            <label for="url_imagem">Url_imagem</label>
+            <input type="text" id="url_imagem" required>
+            <label for="preco_prato">Preço</label>
+            <input type="number" id="preco_prato" required>
+            <label for="precisa_produzir">Precisa Produzir</label>
+            <input type="checkbox" id="precisa_produzir" >
+            <label for="">Categoria</label>
+            <select name="categoria" id="categoria_prato">
+                <option value="categoria" id="Prato_Principal">Prato Principal</option>
+                <option value="categoria" id="Bebidas">Bebidas</option>
+            </select>
+            <input type="submit" value="Editar Prato" id="editarprato">
+            <button id="cancelar" onclick="window.location.href='manter_produto.html';">Cancelar</button>
+        </div>
+    </div>
+
+     <script src="token.js"></script>
+    <script src="manter_produtos.js"></script>
+    <script src="criar_prato.js"></script>
+   
+</body>
+</html>
