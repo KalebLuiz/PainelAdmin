@@ -49,13 +49,14 @@
             <input type="password" id="senhanovocolaborador" required>
             <label>Papel:</label>
             <select name="papeis" id="papeis">
-                <option id="papel" value="Admin">Admin</option>
-                <option id="papel" value="Cozinheiro">Cozinheiro</option>
-                <option id="papel" value="Atendente">Atendente</option>
-                <option id="papel" value=" Aux de Cozinha">Auxiliar de Cozinha</option>
-                <option id="papel" value="Entregador">Entregador</option>
+                <option id="Admin" value="32">Admin</option>
+                <option id="Cozinheiro" value="33">Cozinheiro</option>
+                <option id="Atendente" value="34">Atendente</option>
+                <option id="AuxCozinha" value="35">Auxiliar de Cozinha</option>
+                <option id="Entregador" value="36">Entregador</option>
             </select>   
-            <input type="submit" id="CriarNovoColaborador" value="Cadastrar Novo Colaborador">
+            <button onclick="colaboradores()">Cadastrar</button>
+            <!-- <input type="submit" id="CriarNovoColaborador" value="Cadastrar Novo Colaborador" onclick="colaboradores()"> -->
             <button onclick="window.location='manter_colaboradores.html';">Cancelar</button>
 
         </form>
@@ -84,7 +85,7 @@
         </form>
     </div>
 
-    <script src="user.js"></script>
+    
     <script src="verifc.js"></script>
     <script src="manter_colaboradores.js"></script>
     <script src="novo_colaborador.js"></script>

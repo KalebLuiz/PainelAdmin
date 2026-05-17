@@ -35,7 +35,7 @@ async function usuarios(){
             </tr>
             `;
         });
-
+        localStorage.setItem('id_papel', Papel)
         users_table.innerHTML += linhas;
 
     } catch (error){
@@ -44,6 +44,7 @@ async function usuarios(){
 }
 
 usuarios()
+
 
 
 
