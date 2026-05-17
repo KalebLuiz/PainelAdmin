@@ -80,25 +80,25 @@
     <div class="editar_prato" style="display: none;">
         <p>Editar Prato</p>
         <div class="inputspratos">
-            <label for="nome_prato">Nome</label>
-            <input type="text" id="nome_prato" required >
-            <label for="descricao_prato">Descrição</label>
-            <input type="text" id="descricao_prato" required>
-            <label for="quantidade_disp_prato">Quantidade</label>
-            <input type="number" id="quantidade_disp_prato" required>
-            <label for="url_imagem">Url_imagem</label>
-            <input type="text" id="url_imagem" required>
-            <label for="preco_prato">Preço</label>
-            <input type="number" id="preco_prato" required>
-            <label for="precisa_produzir">Precisa Produzir</label>
-            <input type="checkbox" id="precisa_produzir" >
-            <label for="">Categoria</label>
-            <select name="categoria" id="categoria_prato">
-                <option value="categoria" id="Prato_Principal">Prato Principal</option>
-                <option value="categoria" id="Bebidas">Bebidas</option>
+            <label for="edit_nome_prato">Nome</label>
+            <input type="text" id="edit_nome_prato" required >
+            <label for="edit_descricao_prato">Descrição</label>
+            <input type="text" id="edit_descricao_prato" required>
+            <label for="edit_quantidade_disp_prato">Quantidade</label>
+            <input type="number" id="edit_quantidade_disp_prato" required>
+            <label for="edit_url_imagem">Url_imagem</label>
+            <input type="text" id="edit_url_imagem" required>
+            <label for="edit_preco_prato">Preço</label>
+            <input type="number" id="edit_preco_prato" required>
+            <label for="edit_precisa_produzir">Precisa Produzir</label>
+            <input type="checkbox" id="edit_precisa_produzir" >
+            <label for="edit_categoria_prato">Categoria</label>
+            <select name="categoria" id="edit_categoria_prato">
+                <option value="Prato Principal" id="Prato_Principal">Prato Principal</option>
+                <option value="Bebida" id="Bebidas">Bebidas</option>
             </select>
-            <input type="submit" value="Editar Prato" id="editarprato">
-            <button id="cancelar" onclick="window.location.href='manter_produto.html';">Cancelar</button>
+            <input type="submit" value="Editar Prato" id="editarprato" onclick="atualizarprato()">
+            <button id="cancelar" onclick="window.location.href='manter_produto.html';", >Cancelar</button>
         </div>
     </div>
 

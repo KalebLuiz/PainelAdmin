@@ -6,14 +6,13 @@ async function usuarios(){
             throw new Error ("Erro Retorno")
         }
         const ListaUser = await return_users.json();
-        const  UserFiltrados = ListaUser.filter( user => user.papel_id !=37 );
+        const  UserFiltrados = ListaUser.filter( user => user.papel_id !=37 && user.papel_id != 32 );
         console.log("Filtrados:",UserFiltrados);
 
         let Papel = "";
-        if (user => user.papel_id == 32 ){
-            Papel = "Admin"
         
-        } else if (user => user.papel_id == 33 ){
+        
+        if (user => user.papel_id == 33 ){
             Papel = "Cozinheiro"
         } else if (user => user.papel_id == 34 ){
             Papel = "Atendente"

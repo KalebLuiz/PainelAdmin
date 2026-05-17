@@ -301,6 +301,247 @@ header {
     background-color: #2980b9;
 }
 
+/* ============ MANTER COLABORADORES - CSS ESPECÍFICO ============ */
+
+/* Container da tabela */
+.blocktablefuncionarios {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+    overflow-x: auto;
+}
+
+/* Tabela */
+#funcionarios {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#funcionarios th {
+    text-align: left;
+    padding: 12px;
+    background: #f8f9fa;
+    border-bottom: 2px solid #e0e0e0;
+    font-weight: 600;
+}
+
+#funcionarios td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+}
+
+#funcionarios tr:hover {
+    background: #fafafa;
+}
+
+/* Botões de ação */
+.actionbuttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+}
+
+.actionbuttons button {
+    padding: 10px 24px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.actionbuttons button:hover {
+    background: #f5f5f5;
+}
+
+.ButtonRemove {
+    color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+.ButtonRemove:hover {
+    background: #fef5f5;
+}
+
+.ButtonAlterar {
+    color: #f39c12;
+    border-color: #f39c12;
+}
+
+.ButtonAlterar:hover {
+    background: #fef9e6;
+}
+
+.ButtonNew {
+    color: #27ae60;
+    border-color: #27ae60;
+}
+
+.ButtonNew:hover {
+    background: #eafaf1;
+}
+
+.ButtonVoltar {
+    color: #7f8c8d;
+    border-color: #bdc3c7;
+}
+
+/* Formulários (Novo e Alterar) */
+.NovoColaborador,
+.AlteracaoColaborador {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 28px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.NovoColaborador p,
+.AlteracaoColaborador p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #3498db;
+    color: #2c3e50;
+}
+
+/* Estilos dos forms */
+.Novocolaborador,
+.Alteracaocolaborador {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.Novocolaborador label,
+.Alteracaocolaborador label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    margin-top: 8px;
+}
+
+.Novocolaborador label:first-of-type,
+.Alteracaocolaborador label:first-of-type {
+    margin-top: 0;
+}
+
+.Novocolaborador input,
+.Novocolaborador select,
+.Alteracaocolaborador input,
+.Alteracaocolaborador select {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.Novocolaborador input:focus,
+.Novocolaborador select:focus,
+.Alteracaocolaborador input:focus,
+.Alteracaocolaborador select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52,152,219,0.1);
+}
+
+/* Botões dos forms */
+#CriarNovoColaborador,
+#AlterarColaborador {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#CriarNovoColaborador:hover,
+#AlterarColaborador:hover {
+    background: #2980b9;
+}
+
+.Novocolaborador button,
+.Alteracaocolaborador button {
+    background: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.Novocolaborador button:hover,
+.Alteracaocolaborador button:hover {
+    background: #e9ecef;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .blocktablefuncionarios {
+        padding: 16px;
+        margin: 10px;
+    }
+    
+    #funcionarios {
+        font-size: 12px;
+    }
+    
+    #funcionarios th,
+    #funcionarios td {
+        padding: 8px 6px;
+    }
+    
+    .actionbuttons {
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+    
+    .actionbuttons button {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    
+    .NovoColaborador,
+    .AlteracaoColaborador {
+        margin: 10px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .actionbuttons {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    
+    .actionbuttons button {
+        width: 100%;
+    }
+    
+    .Novocolaborador button,
+    .Alteracaocolaborador button {
+        width: 100%;
+    }
+}
+
 /* -----Responsividade */
 @media (max-width: 768px) {
     .blockmenutexto {

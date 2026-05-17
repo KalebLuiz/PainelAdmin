@@ -56,7 +56,8 @@ function coletarID(){
     }
     localStorage.setItem("id_do_produto", RadioSelecionado.value)
     const ID = localStorage.getItem("id_do_produto")
-    console.log(ID)
+    
+  
         
 
 }
@@ -101,11 +102,22 @@ async function RetorneItem() {
         }
 
         const listaitem = await response.json();
-        const item = listaitem.filter(produto => produto.id == ID)
+        const item = listaitem.filter(produto => produto.id == ID)[0] // adicionamos o index 0 para pegar o OBJETO e não retornar como lista
         console.log(item)
-        if (item.id == ID){
-            console.log(listaitem.nome)
-        }
+        console.log(item.nome) 
+        console.log(item.id)  
+           
+
+        
+       
+         document.getElementById("edit_nome_prato").value = item.nome;
+         document.getElementById("edit_descricao_prato").value = item.descricao;
+         document.getElementById("edit_quantidade_disp_prato").value = item.qtd_disp;
+         document.getElementById("edit_url_imagem").value = item.url_imagem;
+         document.getElementById("edit_preco_prato").value = item.preco;
+         document.getElementById("edit_precisa_produzir").checked = item.precisa_produzir;
+         document.getElementById("edit_categoria_prato").value = item.categoria_produto;
+
         
     } catch(erro){
         console.error(erro)
@@ -114,5 +126,38 @@ async function RetorneItem() {
 }
 
 RetorneItem()
+
+
+//--- Edição do produto
+
+async function atualizarprato() {
+    const DadosAtualizados = {
+        nome: document.getElementById("edit_nome_prato").value,
+        descricao: document.getElementById("edit_descricao_prato").value,
+        qtd_disp: document.getElementById("edit_quantidade_disp_prato").value,
+        url_imagem: document.getElementById("edit_url_imagem").value,
+        preco: document.getElementById("edit_preco_prato").value,
+        categoria_produto: document.getElementById("edit_categoria_prato").value,
+        precisa_produzir: document.getElementById("edit_precisa_produzir").checked
+    }
+
+    try {
+        const response = await fetch (`${API_URL}/${ID}`, {
+            method: 'PATCH',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(DadosAtualizados)
+        });
+
+        if(response.ok){
+            console.log("Atualização Feita Com Sucesso!")
+            location.reload()
+        } else{
+            console.log("Aconteceu Algo de Errado!")
+        }
+    } catch (erro){
+        console.error(erro)
+    }
+   
+    }
 
 
