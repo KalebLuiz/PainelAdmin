@@ -32,7 +32,7 @@
         </table>
         <div class="botoesfuncao">
             <button class="btn1">Remover</button>
-            <button class="btn2">Alterar</button>
+            <button class="btn2" onclick="retornarPapel()">Alterar</button>
             <button class="btn3">Novo</button>
             <button class="btn4" onclick="window.location.href='index.html';">Voltar</button>
         </div>
@@ -46,10 +46,27 @@
         <p>Papel</p>
         <form id="formularioNovoPapel">
             <label> Novo Papel</label>
-            <input type="text" id="campoPapel" required>
-            <input type="submit" id="NovoPapelCriado" value="Cadastrar Novo Papel">
+            <input type="text" id="campoPapel" class="campoPapel" required>
+            <input type="button" id="NovoPapelCriado" onclick="CriarPapel()" value="Cadastrar Novo Papel">
+            <input type="button" value="Cancelar" onclick="window.location.href='manter_papeis.html'">
         </form>
     </div>
+
+
+    <div class="block-Edicaopapel" style="display: none;" >
+        <p>Alteração do Papel</p>
+        <form id="formularioEditarPapel">
+            <label>Papel</label>
+            <input type="text" id="campoEditarPapel" class="campoEditarPapel" required>
+            <input type="button" id="EditarPapelCriado" onclick="" value="Atualizar Papel">
+            <input type="button" value="Cancelar" onclick="window.location.href='manter_papeis.html'">
+        </form>
+    </div>
+
+
+
+
+    
     <script src="script.js"></script>
     <script src="conexao.js"></script>
     <script src="verifc.js"></script>

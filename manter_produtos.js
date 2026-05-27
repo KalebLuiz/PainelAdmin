@@ -1,5 +1,6 @@
 const API_URL = "https://x8ki-letl-twmt.n7.xano.io/api:bQLUlOV-/produto";
 
+
 async function RetornarProdutos (){
     try{
         const resposta = await fetch (API_URL);
@@ -160,4 +161,28 @@ async function atualizarprato() {
    
     }
 
+
+
+async function Deleteproduto() {
+    const ID_DELETE = localStorage.getItem("id_do_produto")
+    try {
+        const response =  await fetch (`${API_URL}/${ID_DELETE}`,{
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (response.ok){
+            console.log("Deu certo!")
+            alert("Produto Deletado!")
+            location.reload()
+           
+        } else {
+            console.log("Deu algum erro")
+        }
+    } catch (erro){
+        console.error(erro)
+    }
+}
 

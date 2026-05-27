@@ -5,12 +5,23 @@ let btn3 = document.querySelector(".btn3");
 let btn4 = document.querySelector(".btn4");
 let BlockTabelaPapeis = document.querySelector(".blocktabela-papeis");
 let BlockNovoPapel = document.querySelector(".block-novopapel");
+let BlockEditarPapel = document.querySelector(".block-Edicaopapel");
 
 btn3.addEventListener("click", function(){
-    BlockTabelaPapeis.style.display = 'none'
+    BlockTabelaPapeis.style.display = 'none';
+    BlockEditarPapel.style.display = 'none';
     BlockNovoPapel.style.display = 'block';
 
 });
+
+btn2.addEventListener("click", function(){
+    BlockTabelaPapeis.style.display = 'none';
+    BlockEditarPapel.style.display = 'block';
+    BlockNovoPapel.style.display = 'none';
+
+});
+
+
 
 
 
@@ -34,6 +45,5 @@ ButtonNew.addEventListener("click", function(){
     BlockTableFuncionarios.style.display = 'none';
     BlockTabelaNovoColaborador.style.display = 'block';
 });
-
 
 

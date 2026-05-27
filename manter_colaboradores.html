@@ -32,8 +32,8 @@
     </div>
 
     <div class="actionbuttons" id="actionbuttons">
-        <button class="ButtonRemove">Remove</button>
-        <button class="ButtonAlterar">Alterar</button>
+        <button class="ButtonRemove" onclick="COLETARID() ; deletarColaborador()" >Remove</button>
+        <button class="ButtonAlterar" onclick="COLETARID();retornoColaboradores()" >Alterar</button>
         <button class="ButtonNew">Novo</button>
         <button class="ButtonVoltar" onclick="window.location.href='index.html';">Voltar</button>
     </div>
@@ -55,8 +55,8 @@
                 <option id="AuxCozinha" value="35">Auxiliar de Cozinha</option>
                 <option id="Entregador" value="36">Entregador</option>
             </select>   
-            <button onclick="colaboradores()">Cadastrar</button>
-            <!-- <input type="submit" id="CriarNovoColaborador" value="Cadastrar Novo Colaborador" onclick="colaboradores()"> -->
+            
+            <input type="button" id="CriarNovoColaborador" value="Cadastrar Novo Colaborador" onclick="colaboradores()">
             <button onclick="window.location='manter_colaboradores.html';">Cancelar</button>
 
         </form>
@@ -68,17 +68,19 @@
         <form class="Alteracaocolaborador">
             <label>Nome: </label>
             <input type="text" id="nomealterarcolaborador" required > 
+            <label>Email: </label>
+            <input type="email" id="emailalteracaocolaborador" required>
             <label>Senha:</label>
             <input type="password" id="senhaalterarcolaborador" required>
             <label>Papel:</label>
-            <select name="papeis" id="papeis">
-                <option value="Admin">Admin</option>
-                <option value="Cozinheiro">Cozinheiro</option>
-                <option value="Atendente">Atendente</option>
-                <option value=" Aux de Cozinha">Auxiliar de Cozinha</option>
-                <option value="Entregador">Entregador</option>
+            <select name="papeis" id="papeis-alterar">
+                <option value="32">Admin</option>
+                <option value="33">Cozinheiro</option>
+                <option value="34">Atendente</option>
+                <option value="35">Auxiliar de Cozinha</option>
+                <option value="36">Entregador</option>
             </select>   
-            <input type="submit" id="AlterarColaborador" value="Atualizar Colaborador">
+            <input type="button" id="AlterarColaborador" value="Atualizar Colaborador" onclick="COLETARID();atualizarColaborador()" >
             <button onclick="window.location.href='manter_colaboradores.html';">Cancelar</button>
           
 

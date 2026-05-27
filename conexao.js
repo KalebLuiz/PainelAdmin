@@ -2,7 +2,7 @@
 const API_URL = "https://x8ki-letl-twmt.n7.xano.io/api:bQLUlOV-/papel";
 
 // criar uma função assicrona de chamada da api
-async function CriarPapel() {
+async function RetornaPapel() {
     try{
         const resposta = await fetch(API_URL);
         if (!resposta.ok){
@@ -22,7 +22,7 @@ async function CriarPapel() {
         linhas += `
             <tr>
                 <td>${item.Papel}</td>
-                <td><input type="radio" name="selecao"></td>
+                <td><input type="radio" name="selecao" value=${item.id}></td>
             </tr>
         
         
@@ -41,55 +41,69 @@ async function CriarPapel() {
     }
 }
 
-CriarPapel()
+RetornaPapel()
 
 
-const FormNovoPapel = document.getElementById("formularioNovoPapel");
 
-// Criar um "ouvinte" que espera meu submit para executar a função
-FormNovoPapel.addEventListener('submit', async (event) => {
-    const papelfunc = document.getElementById("campoPapel").value;
-    event.preventDefault()
+    
 
-    //criar a varieavel de envio
+async function CriarPapel() {
+    const papel = document.getElementById("campoPapel").value
     const DadosEnvio = {
-    papel: papelfunc
+        Papel: papel 
     }
-    console.log('Dados para enviar são: ', DadosEnvio);
-    //fazer a chamada com o Xano
-    try{
-        const resposta_papel = await fetch('https://x8ki-letl-twmt.n7.xano.io/api:bQLUlOV-/papel',{
-            method:'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(DadosEnvio)
-            
-        });
-        //fazer apos cadastro de papel a tela voltar pra table
-        if (resposta_papel.ok){
-            alert("Sucesso");
-            FormNovoPapel.reset() //Resetar o forM
-            const SairTelaCadastro = document.querySelector(".block-novopapel");
-            SairTelaCadastro.style.display = "none";
 
-            const VoltarTelaTabela = document.querySelector(".blocktabela-papeis")
-            VoltarTelaTabela.style.display = "block";
+    try{
+        const response = await fetch (API_URL, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(DadosEnvio)
+        })
+
+        if (response.ok){
+            console.log("Deu tudo certo")
             location.reload()
         } else {
-            alert('Erro');
+            console.log("erro")
         }
-        
+    } catch(errro){
+        console.error(erro)
+    }
     
-    
-    } catch(erro){
-        console.error("Deu erro na conexão",erro)
+}
+   
+
+function coletarID(){
+    const IDSelecionado = document.querySelector('input [name="selecao"]:checked ')
+
+    if (!IDSelecionado){
+        alert("Selecione um Papel!")
+        return;
     }
 
-});
+    localStorage.setItem(IDSelecionado, "IDSelecionado")
+}
 
 
+async function retornarPapel() {
+    const papel_id = localStorage.getItem("IDSelecionado")
+    console.log(papel_id)
+    try{
+        const response = await fetch (API_URL)
+        if (!response.ok){
+            console.log("Erro!!")
+        }   
+        
 
+        const retornoPapel = await response.json();
+        const retornoPapelFiltrado = retornoPapel.filter(papel => papel.id == papel_id)[0]
+        console.log(retornoPapelFiltrado)
+        document.getElementById("campoEditarPapel").value = retornoPapelFiltrado.Papel
+    } catch(erro){
+        console.error(erro)
+    }
+    
+}
 
 
 

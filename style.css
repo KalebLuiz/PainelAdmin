@@ -166,384 +166,447 @@ header {
     background-color: #fef5f5;
 }
 
-/* -----Manter papéis*/
+/* -----Manter papéis - COM BORDAS IGUAIS A PRODUTO */
 .blocktabela-papeis {
     background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 15px;
-    padding: 24px;
-    max-width: 900px;
-    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 1100px;
+    width: 95%;
+    margin: 20px auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 #retorno_papeis {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 24px;
+    table-layout: fixed;
 }
 
-#retorno_papeis {
+#retorno_papeis th {
     text-align: left;
-    padding: 12px;
-    background-color: #f8f9fa;
-    border-bottom: 2px solid #e0e0e0;
-    font-weight: 600;
-    font-size: 14px;
+    padding: 12px 8px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+    font-size: 13px;
+    color: #333;
+    white-space: normal;
+    word-break: break-word;
 }
 
 #retorno_papeis td {
-    padding: 10px 12px;
+    padding: 10px 8px;
     border-bottom: 1px solid #eee;
-    font-size: 14px;
+    font-size: 13px;
+    color: #333;
+    word-break: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
-.botoesfuncao {
+#retorno_papeis tr:last-child td {
+    border-bottom: none;
+}
+
+#retorno_papeis tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Larguras específicas para cada coluna da tabela de papéis */
+#retorno_papeis th:nth-child(1) { width: 70%; }
+#retorno_papeis th:nth-child(2) { width: 30%; }
+
+/* -----Manter Colaboradores - COM BORDAS IGUAIS A PRODUTO */
+.blocktablefuncionarios {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 1100px;
+    width: 95%;
+    margin: 20px auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#funcionarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+    table-layout: fixed;
+}
+
+#funcionarios th {
+    text-align: left;
+    padding: 12px 8px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+    font-size: 13px;
+    color: #333;
+    white-space: normal;
+    word-break: break-word;
+}
+
+#funcionarios td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+    color: #333;
+    word-break: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+#funcionarios tr:last-child td {
+    border-bottom: none;
+}
+
+#funcionarios tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Larguras específicas para cada coluna da tabela de colaboradores */
+#funcionarios th:nth-child(1) { width: 30%; }
+#funcionarios th:nth-child(2) { width: 20%; }
+#funcionarios th:nth-child(3) { width: 35%; }
+#funcionarios th:nth-child(4) { width: 15%; }
+
+/* -----Manter Produto */
+.retorno-produtos {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 1100px;
+    width: 95%;
+    margin: 20px auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#retorno-produtos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+    table-layout: fixed;
+}
+
+#retorno-produtos th {
+    text-align: left;
+    padding: 12px 8px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+    font-size: 13px;
+    color: #333;
+    white-space: normal;
+    word-break: break-word;
+}
+
+#retorno-produtos td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+    color: #333;
+    word-break: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+#retorno-produtos tr:last-child td {
+    border-bottom: none;
+}
+
+#retorno-produtos tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Larguras específicas para cada coluna */
+#retorno-produtos th:nth-child(1) { width: 14%; }
+#retorno-produtos th:nth-child(2) { width: 20%; }
+#retorno-produtos th:nth-child(3) { width: 8%; }
+#retorno-produtos th:nth-child(4) { width: 15%; }
+#retorno-produtos th:nth-child(5) { width: 8%; }
+#retorno-produtos th:nth-child(6) { width: 11%; }
+#retorno-produtos th:nth-child(7) { width: 12%; }
+#retorno-produtos th:nth-child(8) { width: 8%; }
+
+/* Ajuste para textos longos na coluna Url_imagem */
+#retorno-produtos td:nth-child(4) {
+    font-size: 11px;
+    word-break: break-all;
+}
+
+/* Botões dentro da borda - PADRÃO IGUAL PARA TODAS AS PÁGINAS */
+.actionbuttons,
+.botoesfuncao,
+.retorno-produtos .botoesfunc {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 20px;
 }
 
-.botoesfuncao button {
+.actionbuttons button,
+.botoesfuncao button,
+.retorno-produtos .botoesfunc button {
     padding: 8px 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
     background: #fff;
     font-size: 14px;
     cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.2s ease;
 }
 
-.botoesfuncao button:hover {
-    background-color: #f5f5f5;
+.actionbuttons button:hover,
+.botoesfuncao button:hover,
+.retorno-produtos .botoesfunc button:hover {
+    background-color: #f0f0f0;
 }
 
-.btn1 {
+/* Botão Remover - padrão para todas */
+.ButtonRemove,
+.btn1,
+.remove,
+.retorno-produtos .botoesfunc .remove {
     color: #e74c3c;
     border-color: #e74c3c;
 }
 
-.btn1:hover {
-    background-color: #fef5f5;
+.ButtonRemove:hover,
+.btn1:hover,
+.remove:hover,
+.retorno-produtos .botoesfunc .remove:hover {
+    background-color: #ffe5e5;
 }
 
-.btn2 {
-    color: #f39c12;
-    border-color: #f39c12;
+/* Botão Alterar - padrão para todas */
+.ButtonAlterar,
+.btn2,
+.alterar,
+.retorno-produtos .botoesfunc .alterar {
+    color: #e67e22;
+    border-color: #e67e22;
 }
 
-.btn2:hover {
-    background-color: #fef9e6;
+.ButtonAlterar:hover,
+.btn2:hover,
+.alterar:hover,
+.retorno-produtos .botoesfunc .alterar:hover {
+    background-color: #fff0e0;
 }
 
-.btn3 {
+/* Botão Novo - padrão para todas */
+.ButtonNew,
+.btn3,
+.novo,
+.retorno-produtos .botoesfunc .novo {
     color: #27ae60;
     border-color: #27ae60;
 }
 
-.btn3:hover {
-    background-color: #eafaf1;
+.ButtonNew:hover,
+.btn3:hover,
+.novo:hover,
+.retorno-produtos .botoesfunc .novo:hover {
+    background-color: #e8f8f0;
 }
 
-/* -----Novo Papel*/
-.block-novopapel {
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-    padding: 24px;
-    max-width: 400px;
-    margin: 20px auto;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    
-}
-
-.block-novopapel p {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #2c3e50;
-}
-
-#formularioNovoPapel {
-    display: flex;
-    flex-direction: column;
-}
-
-#formularioNovoPapel label {
-    font-size: 14px;
-    margin-bottom: 6px;
+/* Botão Voltar - padrão para todas */
+button[onclick*="window.location"],
+.retorno-produtos .botoesfunc button[onclick*="window.location"] {
     color: #555;
+    border-color: #aaa;
 }
 
-#campoPapel {
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    margin-bottom: 20px;
+button[onclick*="window.location"]:hover,
+.retorno-produtos .botoesfunc button[onclick*="window.location"]:hover {
+    background-color: #e0e0e0;
 }
 
-#campoPapel:focus {
-    outline: none;
-    border-color: #3498db;
-}
-
-#NovoPapelCriado {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px;
-    font-size: 14px;
+/* Radio buttons e checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
     cursor: pointer;
-    
 }
 
-#NovoPapelCriado:hover {
-    background-color: #2980b9;
+/* Ajuste para radios na tabela de produtos */
+#retorno-produtos input[type="radio"],
+#retorno-produtos input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
 }
 
-/* ============ MANTER COLABORADORES - CSS ESPECÍFICO ============ */
-
-/* Container da tabela */
-.blocktablefuncionarios {
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-    padding: 24px;
-    max-width: 1200px;
-    margin: 0 auto 20px auto;
-    overflow-x: auto;
-}
-
-/* Tabela */
-#funcionarios {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-}
-
-#funcionarios th {
-    text-align: left;
-    padding: 12px;
-    background: #f8f9fa;
-    border-bottom: 2px solid #e0e0e0;
-    font-weight: 600;
-}
-
-#funcionarios td {
-    padding: 10px 12px;
-    border-bottom: 1px solid #eee;
-}
-
-#funcionarios tr:hover {
-    background: #fafafa;
-}
-
-/* Botões de ação */
-.actionbuttons {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto 40px auto;
-    padding: 0 20px;
-}
-
-.actionbuttons button {
-    padding: 10px 24px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background: #fff;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.actionbuttons button:hover {
-    background: #f5f5f5;
-}
-
-.ButtonRemove {
-    color: #e74c3c;
-    border-color: #e74c3c;
-}
-
-.ButtonRemove:hover {
-    background: #fef5f5;
-}
-
-.ButtonAlterar {
-    color: #f39c12;
-    border-color: #f39c12;
-}
-
-.ButtonAlterar:hover {
-    background: #fef9e6;
-}
-
-.ButtonNew {
-    color: #27ae60;
-    border-color: #27ae60;
-}
-
-.ButtonNew:hover {
-    background: #eafaf1;
-}
-
-.ButtonVoltar {
-    color: #7f8c8d;
-    border-color: #bdc3c7;
-}
-
-/* Formulários (Novo e Alterar) */
+/* Formulários */
 .NovoColaborador,
-.AlteracaoColaborador {
+.AlteracaoColaborador,
+.block-novopapel,
+.novoprato,
+.editar_prato {
     background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-    padding: 28px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
     max-width: 500px;
     margin: 20px auto;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .NovoColaborador p,
-.AlteracaoColaborador p {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid #3498db;
-    color: #2c3e50;
+.AlteracaoColaborador p,
+.block-novopapel p,
+.novoprato p,
+.editar_prato p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
 }
 
-/* Estilos dos forms */
 .Novocolaborador,
-.Alteracaocolaborador {
+.Alteracaocolaborador,
+#formularioNovoPapel,
+.inputspratos {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
 .Novocolaborador label,
-.Alteracaocolaborador label {
-    font-size: 14px;
+.Alteracaocolaborador label,
+#formularioNovoPapel label,
+.inputspratos label {
     font-weight: 500;
     color: #555;
-    margin-top: 8px;
-}
-
-.Novocolaborador label:first-of-type,
-.Alteracaocolaborador label:first-of-type {
-    margin-top: 0;
+    font-size: 13px;
 }
 
 .Novocolaborador input,
-.Novocolaborador select,
 .Alteracaocolaborador input,
-.Alteracaocolaborador select {
-    padding: 10px 12px;
-    border: 1px solid #ccc;
+#formularioNovoPapel input,
+.inputspratos input,
+.Novocolaborador select,
+.Alteracaocolaborador select,
+.inputspratos select {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
-    font-family: inherit;
 }
 
 .Novocolaborador input:focus,
-.Novocolaborador select:focus,
 .Alteracaocolaborador input:focus,
-.Alteracaocolaborador select:focus {
+#formularioNovoPapel input:focus,
+.inputspratos input:focus,
+.Novocolaborador select:focus,
+.Alteracaocolaborador select:focus,
+.inputspratos select:focus {
     outline: none;
-    border-color: #3498db;
-    box-shadow: 0 0 0 2px rgba(52,152,219,0.1);
+    border-color: #999;
 }
 
-/* Botões dos forms */
-#CriarNovoColaborador,
-#AlterarColaborador {
+.Novocolaborador input[type="submit"],
+.Novocolaborador button,
+.Alteracaocolaborador input[type="submit"],
+.Alteracaocolaborador button,
+#formularioNovoPapel input[type="submit"],
+.inputspratos input[type="submit"],
+.inputspratos button {
+    margin-top: 5px;
+    padding: 8px 16px;
     background: #3498db;
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 4px;
-    padding: 10px;
     font-size: 14px;
-    font-weight: 500;
     cursor: pointer;
-    margin-top: 20px;
 }
 
-#CriarNovoColaborador:hover,
-#AlterarColaborador:hover {
+.Novocolaborador input[type="submit"]:hover,
+.Novocolaborador button:hover,
+.Alteracaocolaborador input[type="submit"]:hover,
+.Alteracaocolaborador button:hover,
+#formularioNovoPapel input[type="submit"]:hover,
+.inputspratos input[type="submit"]:hover,
+.inputspratos button:hover {
     background: #2980b9;
 }
 
-.Novocolaborador button,
-.Alteracaocolaborador button {
-    background: #f8f9fa;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    font-size: 14px;
-    cursor: pointer;
-    margin-top: 10px;
+.Novocolaborador button:last-of-type,
+.Alteracaocolaborador button,
+.inputspratos button:last-of-type {
+    background: #95a5a6;
+    color: white;
 }
 
-.Novocolaborador button:hover,
-.Alteracaocolaborador button:hover {
-    background: #e9ecef;
+.Novocolaborador button:last-of-type:hover,
+.Alteracaocolaborador button:hover,
+.inputspratos button:last-of-type:hover {
+    background: #7f8c8d;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-    .blocktablefuncionarios {
-        padding: 16px;
-        margin: 10px;
-    }
-    
-    #funcionarios {
-        font-size: 12px;
+/* Responsividade para telas médias */
+@media (max-width: 1024px) {
+    .blocktablefuncionarios,
+    .blocktabela-papeis,
+    .retorno-produtos {
+        width: 98%;
+        padding: 15px;
     }
     
     #funcionarios th,
-    #funcionarios td {
+    #retorno_papeis th,
+    #retorno-produtos th {
+        font-size: 12px;
+        padding: 10px 6px;
+    }
+    
+    #funcionarios td,
+    #retorno_papeis td,
+    #retorno-produtos td {
+        font-size: 12px;
         padding: 8px 6px;
     }
     
-    .actionbuttons {
-        gap: 8px;
-        margin-bottom: 20px;
-    }
-    
-    .actionbuttons button {
-        padding: 8px 16px;
-        font-size: 13px;
-    }
-    
-    .NovoColaborador,
-    .AlteracaoColaborador {
-        margin: 10px;
-        padding: 20px;
-    }
+    #retorno-produtos th:nth-child(2) { width: 18%; }
+    #retorno-produtos th:nth-child(4) { width: 13%; }
+    #retorno-produtos td:nth-child(4) { font-size: 10px; }
 }
 
-@media (max-width: 480px) {
-    .actionbuttons {
-        flex-direction: column;
-        padding: 0 10px;
-    }
-    
-    .actionbuttons button {
-        width: 100%;
-    }
-    
-    .Novocolaborador button,
-    .Alteracaocolaborador button {
-        width: 100%;
-    }
-}
-
-/* -----Responsividade */
+/* Responsividade para telas pequenas */
 @media (max-width: 768px) {
+    .blocktablefuncionarios,
+    .blocktabela-papeis,
+    .retorno-produtos {
+        padding: 15px;
+        margin: 15px;
+        width: 98%;
+    }
+    
+    #funcionarios th, #funcionarios td,
+    #retorno_papeis th, #retorno_papeis td,
+    #retorno-produtos th, #retorno-produtos td {
+        padding: 8px 5px;
+        font-size: 11px;
+    }
+    
+    .actionbuttons button,
+    .botoesfuncao button,
+    .retorno-produtos .botoesfunc button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
     .blockmenutexto {
         flex-direction: column;
         gap: 8px;
@@ -551,13 +614,32 @@ header {
     }
     
     .formulario,
-    .divblockpapeis,
-    .blocktabela-papeis {
+    .divblockpapeis {
         margin: 10px;
         padding: 20px;
     }
     
-    .botoesfuncao button {
-        flex: 1;
+    #funcionarios th:nth-child(1) { width: 28%; }
+    #funcionarios th:nth-child(2) { width: 18%; }
+    #funcionarios th:nth-child(3) { width: 34%; }
+    #funcionarios th:nth-child(4) { width: 20%; }
+    
+    #retorno-produtos th:nth-child(2) { width: 16%; }
+    #retorno-produtos th:nth-child(4) { width: 12%; }
+    #retorno-produtos th:nth-child(6) { width: 10%; }
+    #retorno-produtos th:nth-child(7) { width: 10%; }
+}
+
+@media (max-width: 480px) {
+    .actionbuttons,
+    .botoesfuncao,
+    .retorno-produtos .botoesfunc {
+        flex-direction: column;
+    }
+    
+    .actionbuttons button,
+    .botoesfuncao button,
+    .retorno-produtos .botoesfunc button {
+        width: 100%;
     }
 }

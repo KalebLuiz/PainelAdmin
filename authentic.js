@@ -4,7 +4,7 @@ async function realizarLogin(email, senha) {
     const url = 'https://x8ki-letl-twmt.n7.xano.io/api:yNjbB5PN/auth/login';
     const dados = {
         email: email,
-        senha: senha
+        password: senha
     };
     
     try {
