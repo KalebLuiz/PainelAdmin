@@ -3,8 +3,8 @@
 
 async function DadosUser() {
     const token_auth = localStorage.getItem('token_de_acesso');
-    console.log(token_auth);
-    const url = 'https://x8ki-letl-twmt.n7.xano.io/api:yNjbB5PN/auth/me';
+   
+    const url = CONFIG.API_AUTHME;
     
 
     try {

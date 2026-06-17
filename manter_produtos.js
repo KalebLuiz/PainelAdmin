@@ -1,4 +1,4 @@
-const API_URL = "https://x8ki-letl-twmt.n7.xano.io/api:bQLUlOV-/produto";
+const API_URL = CONFIG.API_PRODUTO;
 
 
 async function RetornarProdutos (){
@@ -10,7 +10,7 @@ async function RetornarProdutos (){
         
         //Transformar a resposta em JSON
         const retorneprodutos = await resposta.json();
-        console.log("Dados recebidos", retorneprodutos);
+        
        
 
         const retorntabelaprodutos = document.getElementById ("retorno-produtos");
@@ -104,9 +104,7 @@ async function RetorneItem() {
 
         const listaitem = await response.json();
         const item = listaitem.filter(produto => produto.id == ID)[0] // adicionamos o index 0 para pegar o OBJETO e não retornar como lista
-        console.log(item)
-        console.log(item.nome) 
-        console.log(item.id)  
+         
            
 
         

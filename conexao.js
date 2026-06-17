@@ -1,5 +1,5 @@
 // criar variavel da api
-const API_URL = "https://x8ki-letl-twmt.n7.xano.io/api:bQLUlOV-/papel";
+const API_URL = CONFIG.API_PAPEL ;
 
 // criar uma função assicrona de chamada da api
 async function RetornaPapel() {
@@ -12,7 +12,7 @@ async function RetornaPapel() {
         
     //transformar em json
         const ListaPapeis = await resposta.json();
-        console.log("Dados recebidos", ListaPapeis);
+        
 
 
     //fetch -> tag responsavel para fazer a chamada

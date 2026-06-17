@@ -1,4 +1,4 @@
-const API_URL_USER = "https://x8ki-letl-twmt.n7.xano.io/api:bQLUlOV-/user";
+const API_URL_USER = CONFIG.API_USER;
 async function usuarios(){
     try{
         const return_users = await fetch (API_URL_USER);

@@ -1,4 +1,4 @@
-const API_URL_USER = "https://x8ki-letl-twmt.n7.xano.io/api:bQLUlOV-/user";
+const API_URL_USER = CONFIG.API_USER;
 
 
 
@@ -18,7 +18,7 @@ async function usuarios(){
         }
         const ListaUser = await return_users.json();
         const  UserFiltrados = ListaUser.filter( user => user.papel_id !=37 && user.papel_id != 32 );
-        console.log("Filtrados:",UserFiltrados);
+        
 
         let Papel = "";
         

@@ -1,7 +1,7 @@
 
 //chamar uma função assicrona com a API
 async function realizarLogin(email, senha) {
-    const url = 'https://x8ki-letl-twmt.n7.xano.io/api:yNjbB5PN/auth/login';
+    const url = CONFIG.API_LOGIN;
     const dados = {
         email: email,
         password: senha
