@@ -26,7 +26,10 @@ Como este foi o meu primeiro projeto, ele reflete exatamente o meu processo de a
 * **Evolução em tempo real:** Comecei com conhecimento básico apenas HTML/CSS e fui aprendendo e implementando o JavaScript no decorrer do desenvolvimento. 
 * **Consumo de APIs:** Meu principal e maior aprendizado foi entender **como consumir e utilizar APIs** para tornar a aplicação dinâmica.
 * **Autoavaliação:** Por ter aprendido JS "com o bonde andando", tenho total consciência de que o código atual possui redundâncias, arquivos sobressalentes e pontos que precisam de refatoração. 
-
 Olhar para este código hoje e conseguir enxergar onde ele pode ser melhorado é, para mim, a maior prova do meu crescimento técnico. 
+
+## Para testes:
+teste@gmail.com
+123
 ---
 
