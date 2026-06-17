@@ -13,14 +13,14 @@ O site é um painel administrativo do delivery, onde é possível gerenciar as o
 - (Adicionar Prato/ Editar Prato / Excluir Prato)
 
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 * **HTML5**
 * **CSS3**
 * **JavaScript**
 
 ---
 
-## 🧠 Aprendizados e Evolução Pessoal (Minha Visão)
+##  Aprendizados e Evolução Pessoal (Minha Visão)
 
 Como este foi o meu primeiro projeto, ele reflete exatamente o meu processo de aprendizado:
 * **Evolução em tempo real:** Comecei com conhecimento básico apenas HTML/CSS e fui aprendendo e implementando o JavaScript no decorrer do desenvolvimento. 
