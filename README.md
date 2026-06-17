@@ -1,6 +1,6 @@
 ﻿#  Painel de Gestão - Sabor Local
 
-Este foi um projeto acadêmico desenvolvido durante meus estudos na **Faculdade Impacta**. O objetivo principal era construir o site de gestão/administração de um aplicativo de delivery. 
+Este foi um projeto acadêmico desenvolvido durante meus estudos na **Faculdade Impacta** (Atualmente estou indo para o segundo semestre). O objetivo principal era construir o site de gestão/administração de um aplicativo de delivery. 
 
 Este é o meu **primeiro projeto prático**, marcando o início da minha jornada no desenvolvimento web.
 
