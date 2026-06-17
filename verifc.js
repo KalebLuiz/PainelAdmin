@@ -1,4 +1,4 @@
-//pagina que chama a função de authenticação para todas as funções
+//pagina que chama a função de authenticação para todas as funçõess
 // ou seja, apenas pessoas com o seu token de autorização porem ter acessos as paginas
 
 function verifyauth (){

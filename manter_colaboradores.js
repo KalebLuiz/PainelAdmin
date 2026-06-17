@@ -1,4 +1,4 @@
-///////-------------Botoes manter colaboradores
+///////-------------Botoes manter colaboradoress
 
 let ButtonRemove = document.querySelector(".ButtonRemove");
 let ButtonAlterar =  document.querySelector(".ButtonAlterar");

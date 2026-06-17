@@ -1,4 +1,4 @@
-///////-------- Botoes Manter Papeis
+///////-------- Botoes Manter Papeiss
 let btn1 = document.querySelector(".btn1");
 let btn2 = document.querySelector(".btn2");
 let btn3 = document.querySelector(".btn3");

@@ -34,7 +34,7 @@ async function CriarPrato() {
                 CriarNovoPrato.reset();
                 location.reload();
             } else{
-                console.log("ERRO")
+                console.log("ERROR")
             }
         } catch (erro){
             console.error("Deu erro!", erro)
