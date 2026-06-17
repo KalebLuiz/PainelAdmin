@@ -1,0 +1,7 @@
+const CONFIG = {
+    API_LOGIN: "API_LOGIN",
+    API_PAPEL: "API_PAPEL",
+    API_USER:  "API_USER",
+    API_SIGNUP: "API_SIGNUP",
+    API_ME: "API_ME"
+}
